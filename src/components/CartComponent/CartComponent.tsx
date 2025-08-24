@@ -32,9 +32,6 @@ export const CartComponent = () => {
       .reduce((total: any, item: any) => total + item.price * item.quantity, 0)
       .toFixed(2);
 
-  const calculateDiscount = (originalPrice: any, discountedPrice: any) => {
-    return Math.round(((originalPrice - discountedPrice) / originalPrice) * 100);
-  };
 
   const handleCheckout = () => {
     setShowConfirmation(true);
