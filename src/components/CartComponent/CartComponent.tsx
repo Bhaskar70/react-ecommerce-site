@@ -8,7 +8,7 @@ export const CartComponent = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart") || '') || [];
+    const storedCart = JSON.parse(localStorage.getItem("cart") || '[]') || [];
     setCartItems(storedCart);
   }, []);
 

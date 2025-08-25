@@ -2,8 +2,8 @@ import './HeaderComponent.scss'
 import { Link, useNavigate } from 'react-router-dom'
 export const HeaderComponent = () => {
   const navigate = useNavigate();
-  const handleLogout = async () => {
-    await localStorage.removeItem('token');
+  const handleLogout = () => {
+    localStorage.removeItem('token');
     navigate('/');
   };
   return (

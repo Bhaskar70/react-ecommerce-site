@@ -18,7 +18,7 @@ export const ProductDetailsComponent = () => {
     fetchProduct();
   }, [id]);
   const handleAddToCart = () => {
-    const existingCart = JSON.parse(localStorage.getItem('cart') || '') || [];
+    const existingCart = JSON.parse(localStorage.getItem('cart') || '[]') || [];
     const existingItemIndex = existingCart.findIndex((item: any) => item.id === product.id);
     if (existingItemIndex >= 0) {
       existingCart[existingItemIndex].quantity += 1;
